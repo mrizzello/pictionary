@@ -1,0 +1,22 @@
+<div class="team-top">
+  <div class="team-name" (click)="editTeamName('team1')">{{ teamService.team1() }}</div>
+  <div class="score-container">
+    <button mat-icon-button (click)="teamService.decrementScore('score1')">-</button>
+    <span>{{ teamService.score1() }}</span>
+    <button mat-icon-button (click)="teamService.incrementScore('score1')">+</button>
+  </div>
+</div>
+
+<div class="home-container">
+  <a mat-raised-button color="primary" routerLink="/game">Words UI</a>
+  <button mat-stroked-button color="warn" (click)="teamService.resetScores()">Reset</button>
+</div>
+
+<div class="team-bottom">
+  <div class="team-name" (click)="editTeamName('team2')">{{ teamService.team2() }}</div>
+  <div class="score-container">
+    <button mat-icon-button (click)="teamService.decrementScore('score2')">-</button>
+    <span>{{ teamService.score2() }}</span>
+    <button mat-icon-button (click)="teamService.incrementScore('score2')">+</button>
+  </div>
+</div>

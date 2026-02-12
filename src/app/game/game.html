@@ -1,0 +1,14 @@
+<div class="game-container">
+  <h1>{{ word() }}</h1>
+
+  <div class="navigation-buttons">
+    <button mat-button (click)="previous()">Previous</button>
+    <button mat-raised-button color="accent" (mousedown)="show()" (mouseup)="hide()" (mouseleave)="hide()">Show Word</button>
+    <button mat-button (click)="next()">Next</button>
+  </div>
+  <div class="navigation-buttons">
+    <a mat-mini-fab routerLink="/" color="primary" aria-label="Home">
+      <mat-icon>home</mat-icon>
+    </a>
+  </div>
+</div>
