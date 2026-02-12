@@ -14,6 +14,7 @@ This is a Pictionary-like web application built with Angular. The application al
 - **Styling**: SCSS
 - **State Management**: Angular Signals
 - **HTTP Client**: Angular's `HttpClient` for fetching words.
+- **Animations**: `@angular/animations` for UI animations.
 
 ### Development Environment
 
@@ -35,3 +36,10 @@ This is a Pictionary-like web application built with Angular. The application al
     - `WordService`: Fetches words from `assets/words.txt`, shuffles them, and provides reactive access to the current word and navigation through the word list using Angular Signals.
 - **MaterialModule**: A custom module (`src/app/material.module.ts`) that imports and exports all necessary Angular Material components used across the application, including `MatButtonModule`, `MatDialogModule`, `MatFormFieldModule`, `MatIconModule`, and `MatInputModule`.
 - **Material Icons**: The Material Icons font is loaded via `index.html` to ensure icons display correctly.
+
+### Deployment
+
+- The application is deployed to GitHub Pages using a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+- The deployment leverages `peaceiris/actions-gh-pages @v4`.
+- During the build process, the `base-href` is dynamically set to `/pictionary/` to ensure correct asset loading and routing for the application when hosted on GitHub Pages as a project page.
+- A `public/404.html` file is included in the build output. This file contains a JavaScript redirect to `index.html`, which is a common workaround to handle 404 errors and enable proper routing for single-page applications on GitHub Pages.
