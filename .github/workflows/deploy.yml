@@ -25,8 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Build Angular app
-        run: ng build --output-path docs
+        run: ng build --output-path docs --base-href /pictionary/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
