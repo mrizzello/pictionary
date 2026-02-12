@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --output-path docs --base-href /pictionary/ --configuration production
+        run: npm run build -- --base-href / --configuration production
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
