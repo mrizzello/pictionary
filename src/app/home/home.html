@@ -1,16 +1,20 @@
 <div class="team-top">
   <div class="team-name" (click)="editTeamName('team1')">{{ teamService.team1() }}</div>
   <div class="score-container">
-    <button mat-icon-button (click)="teamService.decrementScore('score1')">-</button>
+    <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.incrementScore('score1')">
+      <mat-icon>add</mat-icon>
+    </a>
     <span>{{ teamService.score1() }}</span>
-    <button mat-icon-button (click)="teamService.incrementScore('score1')">+</button>
+    <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.decrementScore('score1')">
+      <mat-icon>remove</mat-icon>
+    </a>
   </div>
 </div>
 
 <div class="home-container">
-  <a mat-mini-fab routerLink="/game" color="primary" aria-label="game">
+  <button matFab routerLink="/game" color="primary">
     <mat-icon>comment</mat-icon>
-  </a>
+  </button>
   <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.resetScores()">
     <mat-icon>settings_backup_restore</mat-icon>
   </a>
@@ -19,8 +23,12 @@
 <div class="team-bottom">
   <div class="team-name" (click)="editTeamName('team2')">{{ teamService.team2() }}</div>
   <div class="score-container">
-    <button mat-icon-button (click)="teamService.decrementScore('score2')">-</button>
+    <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.incrementScore('score2')">
+      <mat-icon>add</mat-icon>
+    </a>
     <span>{{ teamService.score2() }}</span>
-    <button mat-icon-button (click)="teamService.incrementScore('score2')">+</button>
+    <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.decrementScore('score2')">
+      <mat-icon>remove</mat-icon>
+    </a>
   </div>
 </div>
