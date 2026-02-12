@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write # Required for OIDC
 
     steps:
       - name: Checkout
@@ -29,3 +33,4 @@ jobs:
         with:
           branch: gh-pages
           folder: dist/pictionary
+          token: ${{ secrets.GITHUB_TOKEN }}
