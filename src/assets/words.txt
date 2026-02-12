@@ -8,7 +8,6 @@ Clé
 Lampe
 Cadenas
 Miroir
-Animaux
 Girafe
 Pingouin
 Kangourou
@@ -19,7 +18,6 @@ Hibou
 Tortue
 Serpent
 Renard
-Métiers
 Médecin
 Pompier
 Astronaute

@@ -8,8 +8,12 @@
 </div>
 
 <div class="home-container">
-  <a mat-raised-button color="primary" routerLink="/game">Words UI</a>
-  <button mat-stroked-button color="warn" (click)="teamService.resetScores()">Reset</button>
+  <a mat-mini-fab routerLink="/game" color="primary" aria-label="game">
+    <mat-icon>comment</mat-icon>
+  </a>
+  <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.resetScores()">
+    <mat-icon>settings_backup_restore</mat-icon>
+  </a>
 </div>
 
 <div class="team-bottom">

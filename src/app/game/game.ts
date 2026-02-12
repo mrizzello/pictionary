@@ -13,7 +13,7 @@ export class Game {
   private wordService = inject(WordService);
   private showWord = signal(false);
 
-  word = computed(() => this.showWord() ? this.wordService.word() : `mot n° ${this.wordService.index() + 1}`);
+  word = computed(() => this.showWord() ? this.wordService.word() : `n° ${this.wordService.index() + 1}`);
 
   next() {
     this.wordService.next();
