@@ -32,5 +32,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist/pictionary
+          folder: dist/pictionary/browser
           token: ${{ secrets.GITHUB_TOKEN }}
