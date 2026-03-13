@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class Game {
   private wordService = inject(WordService);
-  private showWord = signal(false);
+  protected showWord = signal(false);
 
   word = computed(() => this.showWord() ? this.wordService.word() : `n° ${this.wordService.index() + 1}`);
 
@@ -23,11 +23,7 @@ export class Game {
     this.wordService.previous();
   }
 
-  show() {
-    this.showWord.set(true);
-  }
-
-  hide() {
-    this.showWord.set(false);
+  toggleShowWord() {
+    this.showWord.update(v => !v);
   }
 }

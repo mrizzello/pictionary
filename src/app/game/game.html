@@ -8,9 +8,8 @@
       </a>
     </div>
     <div>
-      <button matFab color="accent" aria-label="visibility" (mousedown)="show()" (mouseup)="hide()"
-        (mouseleave)="hide()">
-        <mat-icon>visibility</mat-icon>
+      <button matFab color="accent" aria-label="visibility" (click)="toggleShowWord()">
+        <mat-icon>{{ showWord() ? 'visibility_off' : 'visibility' }}</mat-icon>
       </button>
     </div>
     <div>
