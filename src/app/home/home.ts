@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { TeamService } from '../team';
 import { EditTeamName } from '../edit-team-name/edit-team-name';
 import { MaterialModule } from '../material.module';
+import { Level, WordService } from '../word';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,19 @@ import { MaterialModule } from '../material.module';
 })
 export class Home {
   teamService = inject(TeamService);
+  wordService = inject(WordService);
   dialog = inject(MatDialog);
+
+  protected readonly levels: { value: Level; label: string }[] = [
+    { value: 'easy', label: '🟢' },
+    { value: 'middle', label: '🟡' },
+    { value: 'difficult', label: '🔴' },
+    { value: 'mixte', label: '🎲' },
+  ];
+
+  setLevel(level: Level) {
+    this.wordService.setLevel(level);
+  }
 
   editTeamName(team: 'team1' | 'team2') {
     const dialogRef = this.dialog.open(EditTeamName, {

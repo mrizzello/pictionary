@@ -1,9 +1,9 @@
 <div class="game-container">
-  <h1>{{ word() }}</h1>
+    <h1>{{ word() }}</h1>
 
   <div class="navigation-buttons">
     <div>
-      <a mat-mini-fab aria-label="previous" (click)="previous()" color="tonal">
+      <a mat-mini-fab aria-label="previous" (click)="previous()" color="tonal" [disabled]="showWord()">
         <mat-icon>keyboard_arrow_left</mat-icon>
       </a>
     </div>
@@ -13,11 +13,22 @@
       </button>
     </div>
     <div>
-      <a mat-mini-fab aria-label="next" (click)="next()" color="tonal">
+      <a mat-mini-fab aria-label="next" (click)="next()" color="tonal" [disabled]="showWord()">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </a>
     </div>
   </div>
+<mat-button-toggle-group
+    class="level-toggle"
+    aria-label="Niveau de difficulté"
+    [value]="wordService.level()"
+    [disabled]="showWord()"
+    (change)="setLevel($event.value)"
+  >
+    @for (level of levels; track level.value) {
+      <mat-button-toggle [value]="level.value">{{ level.label }}</mat-button-toggle>
+    }
+  </mat-button-toggle-group>
 </div>
 <div class="navigation-buttons home-button">
   <a mat-mini-fab routerLink="/" color="primary" aria-label="Home">

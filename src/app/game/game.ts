@@ -1,5 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
-import { WordService } from '../word';
+import { Level, WordService } from '../word';
 import { MaterialModule } from '../material.module';
 import { RouterLink } from '@angular/router';
 
@@ -10,10 +10,19 @@ import { RouterLink } from '@angular/router';
   styleUrl: './game.scss',
 })
 export class Game {
-  private wordService = inject(WordService);
+  protected wordService = inject(WordService);
   protected showWord = signal(false);
 
-  word = computed(() => this.showWord() ? this.wordService.word() : `n° ${this.wordService.index() + 1}`);
+  protected readonly levels: { value: Level; label: string }[] = [
+    { value: 'easy', label: '🟢' },
+    { value: 'middle', label: '🟡' },
+    { value: 'difficult', label: '🔴' },
+    { value: 'mixte', label: '🎲' },
+  ];
+
+  word = computed(() =>
+    this.showWord() ? this.wordService.word() : `n° ${this.wordService.count() + 1}`,
+  );
 
   next() {
     this.wordService.next();
@@ -21,6 +30,10 @@ export class Game {
 
   previous() {
     this.wordService.previous();
+  }
+
+  setLevel(level: Level) {
+    this.wordService.setLevel(level);
   }
 
   toggleShowWord() {

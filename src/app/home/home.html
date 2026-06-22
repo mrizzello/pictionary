@@ -18,6 +18,16 @@
   <a mat-mini-fab color="tonal" aria-label="reset" (click)="teamService.resetScores()">
     <mat-icon>settings_backup_restore</mat-icon>
   </a>
+  <mat-button-toggle-group
+    class="level-toggle"
+    aria-label="Niveau de difficulté"
+    [value]="wordService.level()"
+    (change)="setLevel($event.value)"
+  >
+    @for (level of levels; track level.value) {
+      <mat-button-toggle [value]="level.value">{{ level.label }}</mat-button-toggle>
+    }
+  </mat-button-toggle-group>
 </div>
 
 <div class="team-bottom">
