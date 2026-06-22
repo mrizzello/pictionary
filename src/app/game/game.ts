@@ -1,11 +1,10 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { Level, WordService } from '../word';
 import { MaterialModule } from '../material.module';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-game',
-  imports: [MaterialModule, RouterLink],
+  imports: [MaterialModule],
   templateUrl: './game.html',
   styleUrl: './game.scss',
 })
