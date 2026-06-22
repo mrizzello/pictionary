@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1782165285416,
+  "index": "/pictionary/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/pictionary/chunk-6APZOX3H.js",
+        "/pictionary/chunk-AXP7AYL6.js",
+        "/pictionary/favicon.ico",
+        "/pictionary/index.html",
+        "/pictionary/main-AMOGJ2JN.js",
+        "/pictionary/manifest.webmanifest",
+        "/pictionary/styles-UNUSAJUS.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/pictionary/assets/words.txt",
+        "/pictionary/favicon.svg",
+        "/pictionary/icons/apple-touch-icon.png",
+        "/pictionary/icons/icon-128x128.png",
+        "/pictionary/icons/icon-144x144.png",
+        "/pictionary/icons/icon-152x152.png",
+        "/pictionary/icons/icon-192x192.png",
+        "/pictionary/icons/icon-384x384.png",
+        "/pictionary/icons/icon-512x512.png",
+        "/pictionary/icons/icon-72x72.png",
+        "/pictionary/icons/icon-96x96.png",
+        "/pictionary/icons/maskable-icon-192x192.png",
+        "/pictionary/icons/maskable-icon-512x512.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/pictionary/assets/words.txt": "f3161876332723ea9c8d4a69e7a23859b87fa409",
+    "/pictionary/chunk-6APZOX3H.js": "2ee823a079c3718164aa92eddfb4fca344567f3d",
+    "/pictionary/chunk-AXP7AYL6.js": "afb35d7b31d4e23aebc9eafeada3bbfeb8114a31",
+    "/pictionary/favicon.ico": "d676f23bac8b1a5595eb041143481622c1021fe2",
+    "/pictionary/favicon.svg": "4b53a2efa0732d9fd7809392fcd49a9c786f20f3",
+    "/pictionary/icons/apple-touch-icon.png": "59dc15db484efc661053f5cd27985ecededb8ca4",
+    "/pictionary/icons/icon-128x128.png": "b5b73a5a9059fe129a079b128ecfc35decd68cab",
+    "/pictionary/icons/icon-144x144.png": "7369e6db3fe3f3a53f6640488462414879d9d75f",
+    "/pictionary/icons/icon-152x152.png": "8fe637c6b2d8945afcd5569cb1ad9c7bf31e930f",
+    "/pictionary/icons/icon-192x192.png": "fef10d1f7e46170271cebff6d3fddc4fb489d7d2",
+    "/pictionary/icons/icon-384x384.png": "a4051956d35f470e4ee50ed2d9e3cba84704d933",
+    "/pictionary/icons/icon-512x512.png": "6b1108e807a37b33c8e44b6aa2de7db8f86ffad3",
+    "/pictionary/icons/icon-72x72.png": "7339f161078c3fdd91ef5e97c0a4ce511f58010d",
+    "/pictionary/icons/icon-96x96.png": "ab1c56f9dcc0709d961943db6fc8c17149a0441e",
+    "/pictionary/icons/maskable-icon-192x192.png": "af8ab701e2b5af08be2f90f025ac946c69b188fd",
+    "/pictionary/icons/maskable-icon-512x512.png": "4d665db1f87a13b80d08e249d6ffa77b50905031",
+    "/pictionary/index.html": "6b9da9818a197f5924074a8aecf4f2c4754c37c4",
+    "/pictionary/main-AMOGJ2JN.js": "a1155ba77eb4cb2a0b0e5e1a63011c9918957983",
+    "/pictionary/manifest.webmanifest": "7aa6e06c3edb50b05bfaa5d6e7d4f8cd89915521",
+    "/pictionary/styles-UNUSAJUS.css": "496860e86be397c38e8cdf8895a6729147b789f2"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

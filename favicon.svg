@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#3f51b5"/>
+  <!-- pencil -->
+  <g transform="rotate(45 256 256)">
+    <rect x="216" y="120" width="80" height="220" rx="10" fill="#ffffff"/>
+    <rect x="216" y="120" width="80" height="36" rx="10" fill="#ff4081"/>
+    <polygon points="216,340 296,340 256,408" fill="#f5d76e"/>
+    <polygon points="240,376 272,376 256,408" fill="#2d2d2d"/>
+  </g>
+</svg>
